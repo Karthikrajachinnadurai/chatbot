@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat History</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        tr:nth-child(even) {background-color: #f9f9f9;}
+    </style>
+</head>
+<body>
+    <h2>Stored Chat Messages</h2>
+    <table>
+        <tr>
+            <th>User Message</th>
+            <th>Bot Reply</th>
+        </tr>
+        {% for user, bot in data %}
+        <tr>
+            <td>{{ user }}</td>
+            <td>{{ bot }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">⬅ Back to Chat</a>
+</body>
+</html>
